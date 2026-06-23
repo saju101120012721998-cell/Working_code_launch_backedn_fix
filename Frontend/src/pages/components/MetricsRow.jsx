@@ -38,7 +38,7 @@ export default function MetricsRow({session}){
     return (
       <>
         <div className="rounded-2xl border border-slate-700 bg-slate-900 p-4">
-          <div className="text-sm uppercase tracking-[0.2em] text-slate-400">Completion %</div>
+          <div className="text-sm uppercase tracking-[0.2em] text-slate-400">Items completed</div>
           <div className="mt-3 text-2xl font-semibold text-white">—</div>
         </div>
         <div className="rounded-2xl border border-slate-700 bg-slate-900 p-4">
@@ -53,7 +53,7 @@ export default function MetricsRow({session}){
     return (
       <>
         <div className="rounded-2xl border border-slate-700 bg-slate-900 p-4">
-          <div className="text-sm uppercase tracking-[0.2em] text-slate-400">Completion %</div>
+          <div className="text-sm uppercase tracking-[0.2em] text-slate-400">Items completed</div>
           <div className="mt-3 text-2xl font-semibold text-white">—</div>
         </div>
         <div className="rounded-2xl border border-slate-700 bg-slate-900 p-4">
@@ -80,7 +80,7 @@ export default function MetricsRow({session}){
   return (
     <>
       <div className="rounded-2xl border border-slate-700 bg-slate-900 p-4">
-        <div className="text-sm uppercase tracking-[0.2em] text-slate-400">Completion %</div>
+        <div className="text-sm uppercase tracking-[0.2em] text-slate-400">Items completed</div>
         <div className="mt-3 text-2xl font-semibold text-white">{completionPct !== null ? `${completionPct}%` : '—'}</div>
       </div>
       <div className="rounded-2xl border border-slate-700 bg-slate-900 p-4">

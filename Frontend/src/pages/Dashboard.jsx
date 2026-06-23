@@ -222,8 +222,8 @@ function ProjectSummaryCard({session}){
     daysElapsed = daysBetween(startDate, today)
   }
   let daysRemaining = null
-  if(targetDate){
-    daysRemaining = daysBetween(today, targetDate)
+  if(startDate && targetDate && daysElapsed !== null){
+    daysRemaining = daysBetween(startDate, targetDate) - daysElapsed
   }
 
   return (
@@ -938,7 +938,7 @@ function ForecastPage({session}){
         <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           <MetricCard label="Expected finish" value={formatDate(forecast.expected_finish_date)} />
           <MetricCard label="Delay vs target" value={delayDays !== null ? `${delayDays > 0 ? '+' : ''}${delayDays.toFixed(1)}d` : '—'} />
-          <MetricCard label="Completion" value={progress !== null ? `${progress}%` : '—'} />
+          <MetricCard label="Completion % (effort)" value={progress !== null ? `${progress}%` : '—'} />
           <MetricCard label="Projected velocity" value={typeof forecast.projected_velocity === 'number' ? `${forecast.projected_velocity.toFixed(1)}h/sprint` : '—'} />
         </div>
       </section>
